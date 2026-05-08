@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Privacy Policy | Krishi Connect</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f8f5;
+    overflow-x:hidden;
+    color:#333;
+}
+
+/* Navigation */
+
+.navbar{
+    width:100%;
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#2e7d32;
+}
+
+/* Attractive Back Button */
+
+.back-btn{
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#2e7d32,#66bb6a);
+    padding:12px 25px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(46,125,50,0.3);
+}
+
+.back-btn:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 12px 28px rgba(46,125,50,0.5);
+}
+
+/* Hero Section */
+
+.hero{
+    height:75vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* Main Container */
+
+.container{
+    width:85%;
+    max-width:1200px;
+    margin:auto;
+    padding:90px 0;
+}
+
+/* Section Title */
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:45px;
+    color:#1b5e20;
+}
+
+.section-title p{
+    margin-top:10px;
+    color:#666;
+    font-size:18px;
+}
+
+/* Policy Cards */
+
+.policy-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.policy-card{
+    background:white;
+    padding:40px 30px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.5s;
+    position:relative;
+    overflow:hidden;
+}
+
+.policy-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(to right,#2e7d32,#81c784);
+}
+
+.policy-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.policy-card h2{
+    color:#2e7d32;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.policy-card p{
+    color:#666;
+    line-height:1.9;
+}
+
+/* Extra Info Section */
+
+.info-section{
+    background:#eaf5e6;
+    padding:90px 10%;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.info-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.info-box h3{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+/* Statistics */
+
+.stats{
+    background:#1b5e20;
+    color:white;
+    padding:70px 10%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stat h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.stat p{
+    font-size:18px;
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:15px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.section-title h2{
+    font-size:34px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<div class="navbar">
+
+    <div class="logo">
+        🔒 Krishi Connect
+    </div>
+
+    <a href="home.html" class="back-btn">
+        ← Back to Home
+    </a>
+
+</div>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Privacy Policy</h1>
+
+        <p>
+            Your privacy, security, and trust are our top priorities.
+            Learn how Krishi Connect protects your information.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Policy Section -->
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>How We Protect Your Data</h2>
+
+        <p>
+            We are committed to maintaining transparency,
+            security, and confidentiality for all users.
+        </p>
+
+    </div>
+
+    <div class="policy-grid">
+
+        <div class="policy-card">
+
+            <div class="icon">📋</div>
+
+            <h2>Information Collection</h2>
+
+            <p>
+                We collect user details such as names,
+                contact information, and transaction data
+                to improve our services and user experience.
+            </p>
+
+        </div>
+
+        <div class="policy-card">
+
+            <div class="icon">🔐</div>
+
+            <h2>Data Security</h2>
+
+            <p>
+                All user information is securely stored
+                using modern encryption and security protocols
+                to prevent unauthorized access.
+            </p>
+
+        </div>
+
+        <div class="policy-card">
+
+            <div class="icon">👤</div>
+
+            <h2>User Privacy</h2>
+
+            <p>
+                Personal information is never shared
+                with third parties without user consent,
+                except when legally required.
+            </p>
+
+        </div>
+
+        <div class="policy-card">
+
+            <div class="icon">🍪</div>
+
+            <h2>Cookies & Tracking</h2>
+
+            <p>
+                We use cookies to improve website functionality,
+                analyze performance, and personalize user experience.
+            </p>
+
+        </div>
+
+        <div class="policy-card">
+
+            <div class="icon">⚙️</div>
+
+            <h2>User Control</h2>
+
+            <p>
+                Users can update, manage,
+                or request deletion of their personal information anytime.
+            </p>
+
+        </div>
+
+        <div class="policy-card">
+
+            <div class="icon">📞</div>
+
+            <h2>Support & Assistance</h2>
+
+            <p>
+                Our support team is available to answer
+                privacy-related concerns and help protect your account.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Additional Info -->
+
+<section class="info-section">
+
+    <div class="section-title">
+
+        <h2>Our Privacy Commitments</h2>
+
+        <p>
+            Building trust through responsible data handling.
+        </p>
+
+    </div>
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <h3>✔ Transparent Policies</h3>
+            <p>Clear communication about how your data is used.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>✔ Secure Transactions</h3>
+            <p>Protected online payments and safe digital operations.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>✔ Confidential Information</h3>
+            <p>Strict confidentiality for all personal and business data.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>✔ Trusted Platform</h3>
+            <p>Safe environment for farmers, buyers, and partners.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Statistics -->
+
+<section class="stats">
+
+    <div class="stat">
+        <h1>100%</h1>
+        <p>Secure Transactions</p>
+    </div>
+
+    <div class="stat">
+        <h1>24/7</h1>
+        <p>Security Monitoring</p>
+    </div>
+
+    <div class="stat">
+        <h1>10K+</h1>
+        <p>Protected Accounts</p>
+    </div>
+
+    <div class="stat">
+        <h1>99.9%</h1>
+        <p>Data Safety Assurance</p>
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+    © 2024 Krishi Connect | Privacy & Security 🔒
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Seasonal Offers</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fffaf0;
+}
+
+/* Attractive Back Button */
+
+.back-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+
+    text-decoration:none;
+    background:linear-gradient(135deg,#ff9800,#ffb74d);
+    color:white;
+
+    padding:14px 28px;
+    border-radius:50px;
+
+    font-weight:600;
+    font-size:16px;
+
+    box-shadow:0 8px 20px rgba(255,152,0,0.35);
+
+    transition:0.4s;
+    z-index:1000;
+}
+
+.back-btn:hover{
+    transform:translateY(-4px) scale(1.05);
+
+    box-shadow:0 12px 28px rgba(255,152,0,0.5);
+
+    background:linear-gradient(135deg,#fb8c00,#ffa726);
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(rgba(255,152,0,0.85),
+    rgba(255,152,0,0.85)),
+    url('https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=1600');
+
+    background-size:cover;
+    background-position:center;
+
+    padding:120px 20px;
+    text-align:center;
+    color:white;
+}
+
+header h1{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+header p{
+    font-size:22px;
+}
+
+/* Offers Section */
+
+.offers{
+    padding:80px 10%;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+}
+
+.offer{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    transition:0.4s;
+}
+
+.offer:hover{
+    transform:translateY(-10px);
+}
+
+.offer h2{
+    color:#ff9800;
+    margin-bottom:15px;
+}
+
+.offer p{
+    line-height:1.8;
+    color:#555;
+}
+
+@media(max-width:768px){
+
+header h1{
+    font-size:42px;
+}
+
+header p{
+    font-size:18px;
+}
+
+.back-btn{
+    padding:12px 20px;
+    font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="directdeals.html" class="back-btn">
+    ← Back to Direct Deals
+</a>
+
+<header>
+
+<h1>Seasonal Offers</h1>
+
+<p>
+Exclusive discounts on seasonal fruits and vegetables.
+Fresh products directly from trusted farms.
+</p>
+
+</header>
+
+<section class="offers">
+
+<div class="offer">
+<h2>🍎 Fruit Discounts</h2>
+<p>
+Enjoy fresh seasonal fruits at affordable prices with premium quality.
+</p>
+</div>
+
+<div class="offer">
+<h2>🥦 Organic Vegetables</h2>
+<p>
+Healthy organic vegetables grown naturally without harmful chemicals.
+</p>
+</div>
+
+<div class="offer">
+<h2>🌽 Festival Deals</h2>
+<p>
+Special festive offers and agricultural discounts during harvest seasons.
+</p>
+</div>
+
+</section>
+
+</body>
+</html>

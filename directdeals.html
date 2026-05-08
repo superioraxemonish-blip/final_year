@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Direct Deals | Krishi Connect</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f9f3;
+    overflow-x:hidden;
+    color:#333;
+}
+
+/* Navigation */
+
+.navbar{
+    width:100%;
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#2e7d32;
+}
+
+/* Attractive Back Button */
+
+.back-btn{
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#2e7d32,#66bb6a);
+    padding:12px 25px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(46,125,50,0.3);
+}
+
+.back-btn:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 12px 28px rgba(46,125,50,0.5);
+}
+
+/* Hero Section */
+
+.hero{
+    height:90vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-btn{
+    text-decoration:none;
+    background:#66bb6a;
+    color:white;
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.hero-btn:hover{
+    background:#2e7d32;
+    transform:scale(1.08);
+}
+
+/* Section Title */
+
+.section-title{
+    text-align:center;
+    padding-top:80px;
+}
+
+.section-title h2{
+    font-size:45px;
+    color:#1b5e20;
+}
+
+.section-title p{
+    margin-top:10px;
+    font-size:18px;
+    color:#666;
+}
+
+/* Deal Cards */
+
+.deals{
+    padding:70px 10%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.box{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.5s;
+    position:relative;
+    overflow:hidden;
+}
+
+.box::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(to right,#2e7d32,#81c784);
+}
+
+.box:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.box h2{
+    color:#2e7d32;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.box p{
+    line-height:1.8;
+    color:#666;
+    margin-bottom:20px;
+}
+
+/* Buttons */
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#2e7d32;
+    color:white;
+    padding:12px 28px;
+    border-radius:50px;
+    transition:0.4s;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#1b5e20;
+    transform:scale(1.05);
+}
+
+/* Benefits Section */
+
+.benefits{
+    background:#eaf5e6;
+    padding:80px 10%;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.benefit-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.benefit-box h3{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+/* Statistics */
+
+.stats{
+    background:#1b5e20;
+    color:white;
+    padding:70px 10%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stat h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.stat p{
+    font-size:18px;
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:15px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.section-title h2{
+    font-size:34px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<div class="navbar">
+
+    <div class="logo">
+        🤝 Krishi Connect
+    </div>
+
+    <a href="home.html" class="back-btn">
+        ← Back to Home
+    </a>
+
+</div>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Direct Deals Marketplace</h1>
+
+        <p>
+            Build strong farmer-to-buyer partnerships with transparent pricing,
+            bulk purchasing, secure contracts, and direct communication.
+        </p>
+
+       
+    </div>
+
+</section>
+
+<!-- Deals Section -->
+
+<div class="section-title">
+
+    <h2>Our Direct Deal Services</h2>
+
+    <p>
+        Smart agricultural trading solutions without middlemen.
+    </p>
+
+</div>
+
+<section class="deals">
+
+    <div class="box">
+
+        <div class="icon">📦</div>
+
+        <h2>Bulk Purchase</h2>
+
+        <p>
+            Buyers can purchase agricultural products in bulk
+            directly from farmers at discounted wholesale rates.
+        </p>
+
+        <a href="bulkpurchase.html" class="btn">Explore</a>
+
+    </div>
+
+    <div class="box">
+
+        <div class="icon">🌾</div>
+
+        <h2>Contract Farming</h2>
+
+        <p>
+            Establish long-term partnerships with farmers
+            for continuous agricultural supply and stable pricing.
+        </p>
+
+        <a href="contractfarming.html" class="btn">View Plans</a>
+
+    </div>
+
+    <div class="box">
+
+        <div class="icon">🔥</div>
+
+        <h2>Seasonal Offers</h2>
+
+        <p>
+            Enjoy exclusive seasonal discounts on fresh produce,
+            grains, fruits, and organic farm products.
+        </p>
+
+        <a href="seasonaloffers.html" class="btn">Check Offers</a>
+
+    </div>
+
+    <div class="box">
+
+        <div class="icon">🚚</div>
+
+        <h2>Smart Logistics</h2>
+
+        <p>
+            Efficient transportation and delivery systems ensure
+            fresh products reach buyers quickly and safely.
+        </p>
+ <a href="smartlogistics.html" class="btn">Learn More</a>
+       
+    </div>
+
+   
+
+    <div class="box">
+
+        <div class="icon">📈</div>
+
+        <h2>Market Insights</h2>
+
+        <p>
+            Get real-time market prices, demand forecasting,
+            and trend analysis for smarter business decisions.
+        </p>
+
+        <a href="marketinsights.html" class="btn">View Insights</a>
+
+    </div>
+
+</section>
+
+<!-- Benefits -->
+
+<section class="benefits">
+
+    <div class="section-title">
+
+        <h2>Benefits of Direct Deals</h2>
+
+        <p>
+            Helping farmers and buyers grow together.
+        </p>
+
+    </div>
+
+    <div class="benefit-grid">
+
+        <div class="benefit-box">
+            <h3>✔ Better Profit Margins</h3>
+            <p>Farmers earn more with direct selling opportunities.</p>
+        </div>
+
+        <div class="benefit-box">
+            <h3>✔ Transparent Pricing</h3>
+            <p>Fair pricing for both buyers and producers.</p>
+        </div>
+
+        <div class="benefit-box">
+            <h3>✔ Faster Transactions</h3>
+            <p>Quick deal processing and secure online payments.</p>
+        </div>
+
+        <div class="benefit-box">
+            <h3>✔ Trusted Connections</h3>
+            <p>Verified farmers and reliable business partnerships.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Statistics -->
+
+<section class="stats">
+
+    <div class="stat">
+        <h1>20K+</h1>
+        <p>Direct Deals Completed</p>
+    </div>
+
+    <div class="stat">
+        <h1>8K+</h1>
+        <p>Active Buyers</p>
+    </div>
+
+    <div class="stat">
+        <h1>5K+</h1>
+        <p>Verified Farmers</p>
+    </div>
+
+    <div class="stat">
+        <h1>24/7</h1>
+        <p>Support Assistance</p>
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+    © 2024 Krishi Connect | Direct Deals Platform 🤝
+</footer>
+
+</body>
+</html>

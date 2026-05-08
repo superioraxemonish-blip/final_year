@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Buyers | Krishi Connect</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    overflow-x:hidden;
+    color:#333;
+}
+
+/* Navigation */
+
+.navbar{
+    width:100%;
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#2e7d32;
+}
+
+/* Attractive Back Button */
+
+.back-btn{
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#2e7d32,#66bb6a);
+    padding:12px 25px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(46,125,50,0.3);
+}
+
+.back-btn:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 12px 28px rgba(46,125,50,0.5);
+}
+
+/* Hero Section */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    height:95vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.hero p{
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-btn{
+    text-decoration:none;
+    background:#66bb6a;
+    color:white;
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.hero-btn:hover{
+    background:#2e7d32;
+    transform:scale(1.08);
+}
+
+/* Section Title */
+
+.section-title{
+    text-align:center;
+    padding-top:70px;
+}
+
+.section-title h2{
+    font-size:45px;
+    color:#1b5e20;
+}
+
+.section-title p{
+    margin-top:10px;
+    color:#666;
+    font-size:18px;
+}
+
+/* Features */
+
+.features{
+    padding:70px 10%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.feature{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.5s;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.feature::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(to right,#2e7d32,#81c784);
+}
+
+.feature:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.feature-icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.feature h2{
+    color:#2e7d32;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.feature p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* Benefits Section */
+
+.benefits{
+    background:#eef7ee;
+    padding:80px 10%;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.benefit-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.benefit-box h3{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+/* Statistics */
+
+.stats{
+    background:#1b5e20;
+    color:white;
+    padding:70px 10%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stat h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.stat p{
+    font-size:18px;
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:15px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.section-title h2{
+    font-size:34px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<div class="navbar">
+
+    <div class="logo">
+        🛒 Krishi Connect
+    </div>
+
+    <a href="home.html" class="back-btn">
+        ← Back to Home
+    </a>
+
+</div>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Buy Fresh Directly From Farmers</h1>
+
+        <p>
+            Discover farm-fresh vegetables, fruits, grains,
+            and organic products directly from trusted farmers
+            at affordable prices with guaranteed quality.
+        </p>
+
+       
+
+    </div>
+
+</section>
+
+<!-- Features -->
+
+<div class="section-title">
+    <h2>Why Buyers Choose Us</h2>
+    <p>Trusted marketplace connecting consumers directly with producers.</p>
+</div>
+
+<section class="features">
+
+    <div class="feature">
+
+        <div class="feature-icon">🥬</div>
+
+        <h2>Fresh Produce</h2>
+
+        <p>
+            Get naturally grown and freshly harvested
+            vegetables and fruits delivered directly from farms.
+        </p>
+
+    </div>
+
+    <div class="feature">
+
+        <div class="feature-icon">💰</div>
+
+        <h2>Affordable Pricing</h2>
+
+        <p>
+            Eliminate middlemen and enjoy better pricing
+            with direct farmer-to-buyer connections.
+        </p>
+
+    </div>
+
+    <div class="feature">
+
+        <div class="feature-icon">✅</div>
+
+        <h2>Verified Farmers</h2>
+
+        <p>
+            Every farmer is verified to ensure quality,
+            authenticity, and trust in every purchase.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">📱</div>
+
+        <h2>Easy Ordering</h2>
+
+        <p>
+            Browse products, place orders,
+            and track deliveries with a simple interface.
+        </p>
+
+    </div>
+
+    <div class="feature">
+
+        <div class="feature-icon">🌱</div>
+
+        <h2>Organic Options</h2>
+
+        <p>
+            Choose from a wide range of eco-friendly,
+            pesticide-free, and organic farm products.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Benefits -->
+
+<section class="benefits">
+
+    <div class="section-title">
+        <h2>Buyer Benefits</h2>
+        <p>Experience the future of agricultural shopping.</p>
+    </div>
+
+    <div class="benefit-grid">
+
+        <div class="benefit-box">
+            <h3>✔ Better Quality</h3>
+            <p>Fresh products directly sourced from farms.</p>
+        </div>
+
+        <div class="benefit-box">
+            <h3>✔ Transparent Pricing</h3>
+            <p>No hidden charges or middlemen commissions.</p>
+        </div>
+
+        <div class="benefit-box">
+            <h3>✔ Direct Communication</h3>
+            <p>Connect and negotiate directly with farmers.</p>
+        </div>
+
+        <div class="benefit-box">
+            <h3>✔ Sustainable Shopping</h3>
+            <p>Support eco-friendly and local farming communities.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Statistics -->
+
+<section class="stats">
+
+    <div class="stat">
+        <h1>15K+</h1>
+        <p>Happy Buyers</p>
+    </div>
+
+    <div class="stat">
+        <h1>8K+</h1>
+        <p>Daily Deliveries</p>
+    </div>
+
+    <div class="stat">
+        <h1>500+</h1>
+        <p>Trusted Farmers</p>
+    </div>
+
+    <div class="stat">
+        <h1>24/7</h1>
+        <p>Customer Support</p>
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+    © 2024 Krishi Connect | Buyers Platform 🛒
+</footer>
+
+</body>
+</html>

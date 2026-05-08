@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sustainability | Krishi Connect</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4faf4;
+    overflow-x:hidden;
+    color:#333;
+}
+
+/* Navigation */
+
+.navbar{
+    width:100%;
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#2e7d32;
+}
+
+/* Attractive Back Button */
+
+.back-btn{
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#2e7d32,#66bb6a);
+    padding:12px 25px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(46,125,50,0.3);
+}
+
+.back-btn:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 12px 28px rgba(46,125,50,0.5);
+}
+
+/* Hero Banner */
+
+.banner{
+    height:85vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+    padding:20px;
+}
+
+.banner-content{
+    max-width:850px;
+}
+
+.banner h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.banner p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* Section Title */
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:45px;
+    color:#1b5e20;
+}
+
+.section-title p{
+    margin-top:10px;
+    color:#666;
+    font-size:18px;
+}
+
+/* Content Section */
+
+.content{
+    padding:90px 10%;
+}
+
+.content-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.content-box{
+    background:white;
+    padding:40px 30px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.5s;
+    position:relative;
+    overflow:hidden;
+}
+
+.content-box::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(to right,#2e7d32,#81c784);
+}
+
+.content-box:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.content-box h2{
+    color:#2e7d32;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.content-box p{
+    color:#666;
+    line-height:1.9;
+}
+
+/* Sustainability Goals */
+
+.goals{
+    background:#eaf5e6;
+    padding:90px 10%;
+}
+
+.goal-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.goal-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.goal-box h3{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+/* Statistics */
+
+.stats{
+    background:#1b5e20;
+    color:white;
+    padding:70px 10%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stat h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.stat p{
+    font-size:18px;
+}
+
+/* Quote Section */
+
+.quote{
+    padding:90px 10%;
+    text-align:center;
+    background:white;
+}
+
+.quote h2{
+    font-size:40px;
+    color:#2e7d32;
+    margin-bottom:20px;
+}
+
+.quote p{
+    font-size:22px;
+    color:#555;
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:15px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.banner h1{
+    font-size:42px;
+}
+
+.banner p{
+    font-size:17px;
+}
+
+.section-title h2{
+    font-size:34px;
+}
+
+.quote h2{
+    font-size:32px;
+}
+
+.quote p{
+    font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<div class="navbar">
+
+    <div class="logo">
+        🌱 Krishi Connect
+    </div>
+
+    <a href="home.html" class="back-btn">
+        ← Back to Home
+    </a>
+
+</div>
+
+<!-- Hero Banner -->
+
+<section class="banner">
+
+    <div class="banner-content">
+
+        <h1>Sustainability & Green Farming</h1>
+
+        <p>
+            Building a healthier future through eco-friendly agriculture,
+            responsible farming practices, and sustainable food systems.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Sustainability Services -->
+
+<section class="content">
+
+    <div class="section-title">
+
+        <h2>Our Sustainability Initiatives</h2>
+
+        <p>
+            Promoting environmentally responsible and future-ready agriculture.
+        </p>
+
+    </div>
+
+    <div class="content-grid">
+
+        <div class="content-box">
+
+            <div class="icon">🌿</div>
+
+            <h2>Organic Farming</h2>
+
+            <p>
+                Encouraging chemical-free agricultural methods
+                to improve soil fertility, food quality,
+                and environmental safety.
+            </p>
+
+        </div>
+
+        <div class="content-box">
+
+            <div class="icon">💧</div>
+
+            <h2>Water Conservation</h2>
+
+            <p>
+                Using smart irrigation systems and efficient
+                water management techniques to reduce wastage
+                and conserve natural resources.
+            </p>
+
+        </div>
+
+        <div class="content-box">
+
+            <div class="icon">🚚</div>
+
+            <h2>Green Supply Chain</h2>
+
+            <p>
+                Reducing carbon emissions through optimized
+                transportation, eco-friendly packaging,
+                and sustainable logistics systems.
+            </p>
+
+        </div>
+
+        <div class="content-box">
+
+            <div class="icon">☀️</div>
+
+            <h2>Renewable Energy</h2>
+
+            <p>
+                Promoting the use of solar energy,
+                clean technologies, and renewable resources
+                in agricultural operations.
+            </p>
+
+        </div>
+
+        <div class="content-box">
+
+            <div class="icon">🌎</div>
+
+            <h2>Climate Protection</h2>
+
+            <p>
+                Supporting farming methods that reduce
+                greenhouse gas emissions and help fight climate change.
+            </p>
+
+        </div>
+
+        <div class="content-box">
+
+            <div class="icon">♻️</div>
+
+            <h2>Waste Management</h2>
+
+            <p>
+                Encouraging recycling, composting,
+                and sustainable disposal practices
+                to minimize environmental pollution.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Goals Section -->
+
+<section class="goals">
+
+    <div class="section-title">
+
+        <h2>Our Green Goals</h2>
+
+        <p>
+            Creating sustainable agriculture for future generations.
+        </p>
+
+    </div>
+
+    <div class="goal-grid">
+
+        <div class="goal-box">
+            <h3>✔ Reduce Carbon Footprint</h3>
+            <p>Lower emissions through eco-friendly farming systems.</p>
+        </div>
+
+        <div class="goal-box">
+            <h3>✔ Promote Organic Produce</h3>
+            <p>Increase awareness and adoption of organic products.</p>
+        </div>
+
+        <div class="goal-box">
+            <h3>✔ Protect Natural Resources</h3>
+            <p>Encourage responsible use of water and soil resources.</p>
+        </div>
+
+        <div class="goal-box">
+            <h3>✔ Build Green Communities</h3>
+            <p>Support sustainable farming communities across regions.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Statistics -->
+
+<section class="stats">
+
+    <div class="stat">
+        <h1>50K+</h1>
+        <p>Organic Products Sold</p>
+    </div>
+
+    <div class="stat">
+        <h1>10K+</h1>
+        <p>Eco-Friendly Farmers</p>
+    </div>
+
+    <div class="stat">
+        <h1>30%</h1>
+        <p>Reduced Carbon Emissions</p>
+    </div>
+
+    <div class="stat">
+        <h1>100+</h1>
+        <p>Green Projects Completed</p>
+    </div>
+
+</section>
+
+<!-- Quote -->
+
+<section class="quote">
+
+    <h2>“Sustainable farming is the future of healthy living.”</h2>
+
+    <p>
+        At Krishi Connect, we believe agriculture should nourish people
+        while protecting nature for future generations.
+    </p>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+    © 2024 Krishi Connect | Sustainability Initiative 🌍
+</footer>
+
+</body>
+</html>

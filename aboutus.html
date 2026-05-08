@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Krishi Connect</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f7faf7;
+    overflow-x:hidden;
+    color:#333;
+}
+
+/* Navigation */
+
+.navbar{
+    width:100%;
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#2e7d32;
+}
+
+/* Attractive Back Button */
+
+.back-btn{
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#2e7d32,#66bb6a);
+    padding:12px 25px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(46,125,50,0.3);
+}
+
+.back-btn:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 12px 28px rgba(46,125,50,0.5);
+}
+
+/* Hero Section */
+
+.hero{
+    height:85vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* About Section */
+
+.about{
+    padding:90px 10%;
+    text-align:center;
+}
+
+.section-title h2{
+    font-size:45px;
+    color:#1b5e20;
+    margin-bottom:20px;
+}
+
+.section-title p{
+    max-width:900px;
+    margin:auto;
+    line-height:1.9;
+    color:#666;
+    font-size:18px;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+    margin-top:70px;
+}
+
+.card{
+    background:white;
+    padding:40px 30px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.5s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(to right,#2e7d32,#81c784);
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#2e7d32;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* Why Choose Us */
+
+.choose{
+    background:#eaf5e6;
+    padding:90px 10%;
+}
+
+.choose-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.choose-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.choose-box h3{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+/* Statistics */
+
+.stats{
+    background:#1b5e20;
+    color:white;
+    padding:70px 10%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stat h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.stat p{
+    font-size:18px;
+}
+
+/* Team */
+
+.team{
+    padding:90px 10%;
+    text-align:center;
+}
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:35px;
+    margin-top:50px;
+}
+
+.member{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.member:hover{
+    transform:translateY(-10px);
+}
+
+.member img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+.member h3{
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:15px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.section-title h2{
+    font-size:34px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<div class="navbar">
+
+    <div class="logo">
+        🌱 Krishi Connect
+    </div>
+
+    <a href="home.html" class="back-btn">
+        ← Back to Home
+    </a>
+
+</div>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>About Krishi Connect</h1>
+
+        <p>
+            Connecting farmers and buyers through technology,
+            transparency, and sustainable agricultural innovation.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- About Section -->
+
+<section class="about">
+
+    <div class="section-title">
+
+        <h2>Who We Are</h2>
+
+        <p>
+            Krishi Connect is a modern digital agricultural platform
+            designed to bridge the gap between farmers and buyers.
+            We empower farmers with direct market access, secure transactions,
+            and smart business opportunities while helping buyers access
+            fresh and high-quality farm products at fair prices.
+        </p>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🎯</div>
+
+            <h3>Our Mission</h3>
+
+            <p>
+                To empower agriculture through technology,
+                digital innovation, and direct farmer-to-buyer connections.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">🌍</div>
+
+            <h3>Our Vision</h3>
+
+            <p>
+                Building a transparent, sustainable,
+                and globally connected agricultural marketplace.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">🤝</div>
+
+            <h3>Our Goal</h3>
+
+            <p>
+                Helping farmers increase profits while providing
+                buyers with fresh, affordable, and trusted products.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Why Choose Us -->
+
+<section class="choose">
+
+    <div class="section-title">
+
+        <h2>Why Choose Krishi Connect?</h2>
+
+        <p>
+            Creating smarter and more sustainable agricultural trade.
+        </p>
+
+    </div>
+
+    <div class="choose-grid">
+
+        <div class="choose-box">
+            <h3>✔ Direct Farmer Access</h3>
+            <p>Eliminate middlemen and connect directly with producers.</p>
+        </div>
+
+        <div class="choose-box">
+            <h3>✔ Trusted Marketplace</h3>
+            <p>Verified farmers and secure transactions for buyers.</p>
+        </div>
+
+        <div class="choose-box">
+            <h3>✔ Sustainable Farming</h3>
+            <p>Promoting eco-friendly and organic farming practices.</p>
+        </div>
+
+        <div class="choose-box">
+            <h3>✔ Smart Technology</h3>
+            <p>Digital tools for pricing, logistics, and business growth.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Statistics -->
+
+<section class="stats">
+
+    <div class="stat">
+        <h1>10K+</h1>
+        <p>Farmers Connected</p>
+    </div>
+
+    <div class="stat">
+        <h1>15K+</h1>
+        <p>Happy Buyers</p>
+    </div>
+
+    <div class="stat">
+        <h1>100+</h1>
+        <p>Cities Reached</p>
+    </div>
+
+    <div class="stat">
+        <h1>24/7</h1>
+        <p>Customer Support</p>
+    </div>
+
+</section>
+
+<!-- Team Section -->
+
+<section class="team">
+
+    <div class="section-title">
+
+        <h2>Our Core Values</h2>
+
+        <p>
+            Principles that guide our agricultural innovation journey.
+        </p>
+
+    </div>
+
+    <div class="team-grid">
+
+        <div class="member">
+
+           <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+     alt="Transparency Icon"
+     title="Transparency">
+
+            <h3>Transparency</h3>
+
+            <p>
+                Honest pricing and clear communication
+                between buyers and farmers.
+            </p>
+
+        </div>
+
+        <div class="member">
+
+           <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png"
+     alt="Innovation Icon"
+     title="Innovation">
+
+            <h3>Innovation</h3>
+
+            <p>
+                Using technology to transform
+                agricultural trade and logistics.
+            </p>
+
+        </div>
+
+        <div class="member">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png"
+     alt="Sustainability Icon"
+     title="Sustainability">
+            <h3>Sustainability</h3>
+
+            <p>
+                Encouraging eco-friendly farming
+                and responsible agricultural practices.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+    © 2024 Krishi Connect | About Us 🌱
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Logistics</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#eef7f7;
+}
+
+/* Attractive Back Button */
+
+.back{
+    position:fixed;
+    top:20px;
+    right:20px;
+
+    text-decoration:none;
+
+    background:linear-gradient(135deg,#0288d1,#29b6f6);
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    font-size:16px;
+
+    box-shadow:0 8px 20px rgba(2,136,209,0.35);
+
+    transition:0.4s;
+
+    z-index:1000;
+}
+
+.back:hover{
+
+    transform:translateY(-4px) scale(1.05);
+
+    box-shadow:0 12px 28px rgba(2,136,209,0.5);
+
+    background:linear-gradient(135deg,#0277bd,#4fc3f7);
+}
+
+/* Hero Section */
+
+.hero{
+
+    background:
+    linear-gradient(rgba(2,136,209,0.8),
+    rgba(2,136,209,0.8)),
+    url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1600');
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+
+    padding:120px 20px;
+
+    text-align:center;
+}
+
+.hero h1{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+}
+
+/* Cards */
+
+.cards{
+
+    padding:80px 10%;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+}
+
+.card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h2{
+    color:#0288d1;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.8;
+    color:#555;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.back{
+    padding:12px 20px;
+    font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="directdeals.html" class="back">
+    ← Back to Direct Deals
+</a>
+
+<section class="hero">
+
+<h1>Smart Logistics</h1>
+
+<p>
+Modern transportation and smart supply chain management
+solutions for faster and safer agricultural delivery.
+</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h2>🚚 Fast Transport</h2>
+<p>
+Quick and secure transportation services for agricultural products.
+</p>
+</div>
+
+<div class="card">
+<h2>📍 Live Tracking</h2>
+<p>
+Monitor deliveries and shipment locations in real-time.
+</p>
+</div>
+
+<div class="card">
+<h2>❄ Cold Storage</h2>
+<p>
+Maintain freshness and quality of vegetables and fruits.
+</p>
+</div>
+
+</section>
+
+</body>
+</html>
