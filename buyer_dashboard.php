@@ -207,7 +207,7 @@ body{
         🌾 Krishi Connect
     </div>
 
-    <a href="get_started.php" class="back-btn">
+    <a href="getstated.html" class="back-btn">
         ← Back
     </a>
 

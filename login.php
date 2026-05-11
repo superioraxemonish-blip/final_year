@@ -255,7 +255,7 @@ footer {
       <button type="submit" name="login">Login</button>
     </form>
 
-     <a href="getstart.html"><- back</a>
+     <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
   </div>
 </div>
 

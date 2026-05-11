@@ -341,10 +341,6 @@ if($mediaQuery && $mediaQuery->num_rows > 0){
 ₹<?php echo $row['price']; ?>
 </div>
 
-<button class="buy-btn">
-Buy Now
-</button>
-
 </div>
 
 </div>
